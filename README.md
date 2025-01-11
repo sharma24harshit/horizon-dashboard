@@ -1,7 +1,7 @@
 Get started with Horizon Dashboard UI
 
 ### Introduction
-Created to provide insight do dashbaords.
+Created to provide Insight for dashboards.
 
 ### Quick Start
 

@@ -60,11 +60,11 @@ export default function Overview() {
           followers='9.7k'
           following='274'
         />
-        <Storage
+        {/* <Storage
           gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
           used={25.6}
           total={50}
-        />
+        /> */}
         <Upload
           gridArea={{
             base: "3 / 1 / 4 / 2",
@@ -79,7 +79,7 @@ export default function Overview() {
         mb='20px'
         templateColumns={{
           base: "1fr",
-          lg: "repeat(2, 1fr)",
+          lg: "repeat(1, 1fr)",
           "2xl": "1.34fr 1.62fr 1fr",
         }}
         templateRows={{
@@ -88,7 +88,7 @@ export default function Overview() {
           "2xl": "1fr",
         }}
         gap={{ base: "20px", xl: "20px" }}>
-        <Projects
+        {/* <Projects
           gridArea='1 / 2 / 2 / 2'
           banner={banner}
           avatar={avatar}
@@ -97,13 +97,13 @@ export default function Overview() {
           posts='17'
           followers='9.7k'
           following='274'
-        />
+        /> */}
         <General
           gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
           minH='365px'
           pe='20px'
         />
-        <Notifications
+        {/* <Notifications
           used={25.6}
           total={50}
           gridArea={{
@@ -111,7 +111,7 @@ export default function Overview() {
             lg: "2 / 1 / 3 / 3",
             "2xl": "1 / 3 / 2 / 4",
           }}
-        />
+        /> */}
       </Grid>
     </Box>
   );
