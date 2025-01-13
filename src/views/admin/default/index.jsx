@@ -79,7 +79,7 @@ export default function UserReports() {
               }
             />
           }
-          name='Earnings'
+          name='Total Revenue'
           value='$350.4'
         />
         <MiniStatistics
@@ -93,7 +93,7 @@ export default function UserReports() {
               }
             />
           }
-          name='Spend this month'
+          name='Profits'
           value='$642.39'
         />
         <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
@@ -141,7 +141,7 @@ export default function UserReports() {
               }
             />
           }
-          name='Total Projects'
+          name='Total Products'
           value='2935'
         />
       </SimpleGrid>
@@ -157,11 +157,11 @@ export default function UserReports() {
           <PieCard />
         </SimpleGrid>
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <ComplexTable
+      <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} gap='20px' mb='20px'>
+        {/* <ComplexTable
           columnsData={columnsDataComplex}
           tableData={tableDataComplex}
-        />
+        /> */}
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
           <Tasks />
           <MiniCalendar h='100%' minW='100%' selectRange={false} />

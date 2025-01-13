@@ -70,7 +70,7 @@ export default function CheckTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          PROGRESS
+          UNIT PRICE
         </Text>
       ),
       cell: (info) => (
@@ -142,7 +142,7 @@ export default function CheckTable(props) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Check Table
+          Sales
         </Text>
         <Menu />
       </Flex>

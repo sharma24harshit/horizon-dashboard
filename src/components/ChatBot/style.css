@@ -1,0 +1,55 @@
+.chatBotModalContainer{
+}
+.tabs-Header{
+border: 1px solid red;
+height: 55px;
+}
+/* chat container */
+.chat-tab-container {
+    font-family: 'DM Sans', sans-serif;
+    /* border: 1px solid red; */
+    height: 425px;
+    overflow-y: scroll;
+    padding-right: 10px;
+    /* -ms-overflow-style: none; 
+    scrollbar-width: 5px; */
+}
+
+/* .chat-tab-container::-webkit-scrollbar{
+    display: none;
+} */
+.chat-tab-container [data-scroll] {
+    scroll-behavior: smooth;
+  }
+.mainText {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.subText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Input Box css */
+.inputBox {
+    /* border: 1px solid red; */
+    margin-top: 4px;
+    position: relative;
+    top: 20px;
+}
+.submitChatBtn{
+    position: absolute;
+    bottom: 43px;
+    left: 374px;
+    cursor: pointer;
+    z-index: 1;
+}
+.insight-text{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    gap: 4px;
+}

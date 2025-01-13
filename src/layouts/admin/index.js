@@ -1,5 +1,7 @@
 // Chakra imports
-import { Portal, Box, useDisclosure } from '@chakra-ui/react';
+import { Portal, Box, useDisclosure, Avatar, Image } from '@chakra-ui/react';
+import ChatBot from 'components/ChatBot/ChatBot';
+import ChatBotModal from 'components/ChatBot/ChatBotModal';
 import Footer from 'components/footer/FooterAdmin.js';
 // Layout components
 import Navbar from 'components/navbar/NavbarAdmin.js';
@@ -15,6 +17,8 @@ export default function Dashboard(props) {
   // states and functions
   const [fixed] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(false);
+  // chat bot states
+  const [isOpen, setIsOpen]  = useState(false);
   // functions for changing the states from components
   const getRoute = () => {
     return window.location.pathname !== '/admin/full-screen-maps';
@@ -105,6 +109,11 @@ export default function Dashboard(props) {
   document.documentElement.dir = 'ltr';
   const { onOpen } = useDisclosure();
   document.documentElement.dir = 'ltr';
+
+  const handleBotIconClick = ()=>{
+    setIsOpen(!isOpen);
+    };
+
   return (
     <Box>
       <Box>
@@ -142,7 +151,6 @@ export default function Dashboard(props) {
                 />
               </Box>
             </Portal>
-
             {getRoute() ? (
               <Box
                 mx="auto"
@@ -160,6 +168,8 @@ export default function Dashboard(props) {
                 </Routes>
               </Box>
             ) : null}
+           <ChatBot handleBotIconClick={handleBotIconClick}/>
+           <ChatBotModal setIsOpen={setIsOpen} isOpen={isOpen}/>
             <Box>
               <Footer />
             </Box>
