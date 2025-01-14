@@ -1,51 +1,150 @@
-.chatBotModalContainer{
+.chatBotModalContainer {
     font-family: 'DM Sans';
 }
-.tabs-Header{
-border: 1px solid red;
-height: 55px;
 
-}
-.tab-text{
-font-family: 'DM Sans';
-font-size: 20px;
-font-weight: 600;
-}
-/* chat container */
-.chat-tab-container {
-    font-family: 'DM Sans';
+.tabs-Header {
     /* border: 1px solid red; */
-    height: 435px;
-    overflow-y: scroll;
-    padding-right: 10px;
-    /* -ms-overflow-style: none; 
-    scrollbar-width: 5px; */
+    border-bottom: 1px solid rgba(225, 225, 225, 1);
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tab_icon{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-right: 7px;
+}
+.tab-title {
+    border-right: 1px solid rgba(225, 225, 225, 1);
+    width: 50%;
+    height: 100%;
+    font-family: 'DM Sans';
+    font-size: calc(20px * (100vw / 1610));
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-title:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
-/* .chat-tab-container::-webkit-scrollbar{
+/*----------  chat container   ----------------------*/
+
+.chat-tab-container {
+    position: relative;
+    font-family: 'DM Sans';
+    /* border: 1px solid brown; */
+    height: 90%;
+    width: 100%;
+    padding: 2.5% 0 2.5% 2.5%;
+    /* overflow-y: scroll; */
+    /* -ms-overflow-style: none;  */
+}
+.chat-tab-container-with-flex {
+    position: relative;
+    font-family: 'DM Sans';
+    /* border: 1px solid brown; */
+    height: 90%;
+    width: 100%;
+    padding: 2.5% 0 2.5% 2.5%;
+    /* overflow-y: scroll;
+    -ms-overflow-style: none;  */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.main-chat-box{
+overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Style the scrollbar track */
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Track color */
+    border-radius: 6px; /* Optional: Rounded corners */
+  }
+  
+.main-chat-box::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .main-chat-box::-webkit-scrollbar-thumb {
+    background-color: #6e51d9;
+    border-radius: 10px;
+    height: 5px;
+  }
+  
+  .main-chat-box::-webkit-scrollbar-track {
+    background-color: white;
+    height: 5px;
+  }
+.chat-tab-container::-webkit-scrollbar{
     display: none;
-} */
+}
 .chat-tab-container [data-scroll] {
     scroll-behavior: smooth;
-  }
-.mainText {
-    font-size: 30px;
-    font-weight: bold;
 }
-
+.chatTab-top-container{
+    /* border: 1px solid red; */
+}
+.suggestion-container{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    gap:10px;
+margin-top: 10px;
+}
+.mainText {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    margin-left: 8px;
+}
 .subText {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 32px;
+    margin-left: 8px;
 }
-
+.suggestion-text{
+    /* border: 1px solid red; */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px;
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(245, 245, 245, 1);
+    border-radius:15px;
+    text-align:'left';
+    cursor: pointer;
+}
 /* Input Box css */
 .inputBox {
     /* border: 1px solid red; */
+    width: 96%;
+    margin: auto;
     margin-top: 4px;
-    position: relative;
+    position: absolute;
+    bottom: 10px;
+    padding-right: 1.3%;
+    /* left: center; */
     /* top: 20px; */
 }
-.submitChatBtnDiv{
+
+.submitChatBtnDiv {
     /* border: 1px solid green; */
     width: 32px;
     height: 32px;
@@ -55,14 +154,51 @@ font-weight: 600;
     cursor: pointer;
     z-index: 5;
 }
-.submitChatBtnDiv:hover{
+
+.submitChatBtnDiv:hover {
     cursor: pointer;
 }
-.insight-text{
+.Chat-textField{
+border-radius:40px;
+}
+
+/*----------------    Insight Css    -----------------*/
+
+.insight-tab-container{
+    font-family: 'DM Sans';
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 2.5%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.insight-tab-container>div{
+    /* width: inherit;
+    box-sizing: border-box; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    gap:10px;
+}
+.insight-text {
     /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     font-size: 14px;
     gap: 4px;
+    /* height:80px; */
+    padding: 1.5%;
+    background-color: rgba(245, 245, 245, 1);
 }
+.insight-text>img{
+    /* border: 1px solid red; */
+    width: 35px;
+    /* height: 60%; */
+    aspect-ratio: 1;
+    /* width: 60%; */
+}
+

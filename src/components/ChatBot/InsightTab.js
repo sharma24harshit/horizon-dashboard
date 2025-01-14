@@ -26,17 +26,15 @@ const handleCheckboxChange = (id) => {
 };
 
     return (
-      <Box className="chat-tab-container" padding="3px">
+      <Box className="insight-tab-container" >
       <Box 
-      padding="3px">
+      >
         {data && data.map((item, index) => (
-          <Text key={item?.id} padding="5px"
-           backgroundColor="gray.100" 
-           borderRadius="5px" 
-           marginBottom="8px"
+          <Text key={item?.id}
+           borderRadius="10px" 
            className='insight-text'
            >
-            <Image src={item?.icon} width={'25px'} objectFit={'fit'}/>
+            <Image src={item?.icon}  objectFit={'fit'}/>
             {item?.suggestion}
             <Checkbox 
             isChecked={item?.checked}

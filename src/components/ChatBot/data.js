@@ -1,7 +1,7 @@
-import icon1 from "../../assets/img/dashboards/icon1.png";
-import icon2 from "../../assets/img/dashboards/icon2.png";
-import icon3 from "../../assets/img/dashboards/icon3.png";
-import icon4 from "../../assets/img/dashboards/icon4.png";
+import icon1 from "../../assets/img/dashboards/icon1.svg";
+import icon2 from "../../assets/img/dashboards/icon2.svg";
+import icon3 from "../../assets/img/dashboards/icon3.svg";
+import icon4 from "../../assets/img/dashboards/icon4.svg";
 
 export const ChatMockData = [
     {

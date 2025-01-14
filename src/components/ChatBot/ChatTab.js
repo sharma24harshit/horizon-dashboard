@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Box, Button, Spinner, Text, Textarea } from '@chakra-ui/react';
+import { Box, Button, Image, Spinner, Text, Textarea } from '@chakra-ui/react';
 import { IoSend  } from "react-icons/io5";
-import { GoArrowRight } from "react-icons/go";
+import active_send_btn from "../../assets/img/dashboards/send_btn_active.svg";
+import disable_send_btn from "../../assets/img/dashboards/send_btn_disabled.svg";
 import {ChatMockData} from "./data";
 
 const ChatTab = () => {
@@ -17,7 +18,7 @@ const ChatTab = () => {
     // Scroll to bottom when chat history updates
   useEffect(() => {
     if (chatContainerRef.current) {
-        console.log(chatContainerRef.current.scrollHeight)
+        //console.log(chatContainerRef.current.scrollHeight)
       chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
   }, [chatHistory]);
@@ -70,24 +71,27 @@ const ChatTab = () => {
 
     return (
         <Box
-            className='chat-tab-container'
+            className={chatHistory.length ? 
+                'chat-tab-container':
+            'chat-tab-container-with-flex'}
             ref={chatContainerRef} // Reference to scroll container
         >
+            {/* Suggested Questions */}
+            <Box 
+            className='main-chat-box'
+            height={chatHistory.length ? '74%' : '55%'}
+            marginBottom='10px'
+            // border={'1px solid red'}
+            >
+
+            <Box className='chatTab-top-container'>
             <Text className='mainText'>Hi,</Text>
             <Text className='subText'>How can i assist you today?</Text>
-            {/* Suggested Questions */}
-            <Box>
-                {ChatMockData && ChatMockData.map((item, index) => (
+            <Box className='suggestion-container'>
+            {ChatMockData && ChatMockData.map((item, index) => (
                     <Text
                         key={index}
-                        border='1px solid rgba(225,225,225,1)'
-                        borderRadius='15px'
-                        backgroundColor='rgba(245, 245, 245, 1)'
-                        padding='5px'
-                        fontSize='14px'
-                        textAlign='left'
-                        cursor='pointer'
-                        marginTop='8px'
+                        className='suggestion-text'
                         onClick={() => handleSuggestedText(item.question)}
                     >
                         {item?.question}
@@ -95,16 +99,14 @@ const ChatTab = () => {
                     </Text>
                 ))}
             </Box>
+            </Box>
             {/* Chat History Container*/}
             {chatHistory.length ? <Box
                 className="chat-history"
                 marginBottom="1px"
-                marginTop="20px"
+                marginTop="5px"
                 // maxHeight="200px"
                 // overflowY="auto"
-                padding="5px"
-                border="1px solid rgba(225,225,225,1)"
-                borderRadius="10px"
             >
                 {chatHistory && chatHistory.map((chat, index) => (
                     <Box
@@ -112,16 +114,19 @@ const ChatTab = () => {
                         display='flex'
                         justifyContent={chat.type === "user" ? "right" : "left"}
                         textAlign={"left"}
-                        marginBottom="8px"
+                        marginBottom="5px"
+
                     >
                         <Text
                             display="inline-block"
                             padding="10px"
                             borderRadius="15px"
+                            fontSize='14px'
+                            lineHeight='24px'
                             backgroundColor={
-                                chat.type === "user" ? "blue.100" : "rgba(250, 250, 250, 1)"
+                                chat.type === "user" ? "blue.100" : "rgba(245, 245, 245, 1)"
                             }
-                            color={chat.type === "user" ? "blue.800" : "gray.800"}
+                            color={chat.type === "user" ? "rgba(51, 51, 51, 1)" : "rgba(51, 51, 51, 1)"}
                             maxWidth="80%"
                             whiteSpace="pre-wrap"
                         >
@@ -130,7 +135,7 @@ const ChatTab = () => {
                     </Box>
                 ))}
                 {isTyping && (
-                    <Box textAlign="left" marginBottom="8px">
+                    <Box textAlign="left" marginBottom="5px">
                         <Text
                             display="inline-block"
                             padding="10px"
@@ -144,15 +149,23 @@ const ChatTab = () => {
                     </Box>
                 )}
             </Box> : ""}
-
+            </Box>
             {/* Input Box Container */}
             <Box className='inputBox'>
                 <Box className='submitChatBtnDiv'
                 onClick={handleChatSubmit}
                 >
-                    <IoSend  fontSize={32} color="rgba(67,24,255,1)" />
+                    <Image
+                    width='25px'
+                    height='25px'
+                    fit
+                    src={ chatText?.length ? active_send_btn : disable_send_btn }
+                />
                 </Box>
                 <Textarea resize="none" placeholder="Type a message"
+                className='Chat-textField'
+                borderRadius='30px'
+                height='100px'
                     value={chatText}
                     onChange={(e) => setChatText(e.target.value)}
                 />
