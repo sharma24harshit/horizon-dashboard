@@ -1,14 +1,21 @@
 .chatBotModalContainer{
+    font-family: 'DM Sans';
 }
 .tabs-Header{
 border: 1px solid red;
 height: 55px;
+
+}
+.tab-text{
+font-family: 'DM Sans';
+font-size: 20px;
+font-weight: 600;
 }
 /* chat container */
 .chat-tab-container {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans';
     /* border: 1px solid red; */
-    height: 425px;
+    height: 435px;
     overflow-y: scroll;
     padding-right: 10px;
     /* -ms-overflow-style: none; 
@@ -36,14 +43,20 @@ height: 55px;
     /* border: 1px solid red; */
     margin-top: 4px;
     position: relative;
-    top: 20px;
+    /* top: 20px; */
 }
-.submitChatBtn{
+.submitChatBtnDiv{
+    /* border: 1px solid green; */
+    width: 32px;
+    height: 32px;
     position: absolute;
-    bottom: 43px;
-    left: 374px;
+    bottom: 5px;
+    right: 5px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 5;
+}
+.submitChatBtnDiv:hover{
+    cursor: pointer;
 }
 .insight-text{
     /* border: 1px solid red; */

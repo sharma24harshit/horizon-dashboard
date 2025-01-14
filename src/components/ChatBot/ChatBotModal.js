@@ -11,7 +11,7 @@ const ChatBotModal = ({ setIsOpen, isOpen }) => {
         <Box
             display={isOpen ? 'block' : 'none'}
             width='490px'
-            height='510px'
+            // height='510px'
             borderRadius='40px'
             border={'1px solid rgba(225,225,225,1)'}
             position="fixed"
@@ -26,17 +26,17 @@ const ChatBotModal = ({ setIsOpen, isOpen }) => {
                 <TabList justifyContent={'space-around'}
                 className='tabs-Header'
                 >
-                    <Tab>
+                    <Tab className='tab-text'>
                         <Image src={Insight_icon} marginRight='5px' />
                         Insights</Tab>
-                    <Tab>
+                    <Tab className='tab-text'>
                         <Image src={chat_icon} marginRight='5px' />
                         Chat</Tab>
                 </TabList>
 
                 <TabPanels>
                     <TabPanel>
-                        <InsightTab isOpen={isOpen}/>
+                        <InsightTab />
                     </TabPanel>
                     <TabPanel>
                         <ChatTab />

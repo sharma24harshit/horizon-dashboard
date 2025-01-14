@@ -15,7 +15,7 @@ const ChatBot = ({ handleBotIconClick }) => {
             alignItems='center'
             position="fixed"
             right='10px'
-            top='520px'
+            bottom="10px"
             cursor='pointer'
             onClick={handleBotIconClick}
         >

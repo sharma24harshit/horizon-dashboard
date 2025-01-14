@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Box, Button, Spinner, Text, Textarea } from '@chakra-ui/react';
-import { IoSendOutline } from "react-icons/io5";
+import { IoSend  } from "react-icons/io5";
 import { GoArrowRight } from "react-icons/go";
 import {ChatMockData} from "./data";
 
@@ -147,16 +147,15 @@ const ChatTab = () => {
 
             {/* Input Box Container */}
             <Box className='inputBox'>
+                <Box className='submitChatBtnDiv'
+                onClick={handleChatSubmit}
+                >
+                    <IoSend  fontSize={32} color="rgba(67,24,255,1)" />
+                </Box>
                 <Textarea resize="none" placeholder="Type a message"
                     value={chatText}
                     onChange={(e) => setChatText(e.target.value)}
                 />
-                {/* <Button className='submitChatBtn'
-                    onClick={handleChatSubmit}
-                    colorScheme="blue"
-                >
-                    <IoSendOutline />
-                </Button> */}
             </Box>
         </Box>
     )

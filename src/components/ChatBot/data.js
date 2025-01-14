@@ -1,3 +1,8 @@
+import icon1 from "../../assets/img/dashboards/icon1.png";
+import icon2 from "../../assets/img/dashboards/icon2.png";
+import icon3 from "../../assets/img/dashboards/icon3.png";
+import icon4 from "../../assets/img/dashboards/icon4.png";
+
 export const ChatMockData = [
     {
         question: "What were the top-selling products last month?",
@@ -24,7 +29,7 @@ Amazon's best sellers frequently shift due to seasonal trends, promotions, and n
     `
     },
     {
-        question: "Give me the sales drop reasons in last quarter",
+        question: "Give me the sales drop reasons in last quarter?",
         answer: "The sales drop in the last quarter could be due to various factors, including reduced consumer spending, increased competition, or supply chain disruptions."
     },
     {
@@ -47,32 +52,32 @@ Amazon's best sellers frequently shift due to seasonal trends, promotions, and n
 export const InsightMockData = [
     {
      id:1,
-     icon:"../../assets/img/dashboards/icon2.png",
+     icon:icon2,
      suggestion:"Product X has seen a 15% decrease in sales this quarter—consider revisiting the pricing strategy.",
     },
     {
         id:2,
-        icon:"../assets/img/dashboards/icon1.png",
+        icon:icon1,
         suggestion:"Customers in Region B are purchasing more of Category Y—opportunity to upsell related products."
     },
     {
         id:3,
-        icon:"../../assets/img/dashboards/icon1.png",
+        icon:icon1,
         suggestion:`Predictive analytics: "Revenue for next month is expected to grow by 10% based on current trends.`
     },
     {
         id:4,
-        icon:"../../assets/img/dashboards/icon3.png",
+        icon:icon3,
         suggestion:"Stock of Item Y is expected to run out in 7 days—consider placing a reorder."
     },
     {
         id:5,
-        icon:"../../assets/img/dashboards/icon4.png",
+        icon:icon4,
         suggestion:"Items A, B, and C have been in storage for over 90 days—suggest discounting to clear inventory."
     },
     {
         id:6,
-        icon:"../../assets/img/dashboards/icon2.png",
+        icon:icon2,
         suggestion:"Demand for Product Z is expected to surge during the upcoming holiday season"
     },
 
