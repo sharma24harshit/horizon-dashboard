@@ -79,8 +79,13 @@ const ChatTab = () => {
             {/* Suggested Questions */}
             <Box 
             className='main-chat-box'
-            height={chatHistory.length ? '74%' : '55%'}
-            marginBottom='10px'
+            height={
+                { base: chatHistory.length ? '74%' : '55%',
+                sm:chatHistory.length ? '74%' : '55%',
+                 md: chatHistory.length ? '74%' : '55%',
+                  lg: chatHistory.length ? '80%' : '55%' }
+            }
+            marginBottom={{ base: "10px", sm: "10px", md: "5px", lg: "0px" }}
             // border={'1px solid red'}
             >
 

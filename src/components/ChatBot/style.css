@@ -61,7 +61,7 @@
 }
 .main-chat-box{
 overflow-y: scroll;
-
+/* border: 1px solid brown; */
 }
 
 ::-webkit-scrollbar {
