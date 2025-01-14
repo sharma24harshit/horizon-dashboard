@@ -109,7 +109,7 @@ const ChatTab = () => {
             {chatHistory.length ? <Box
                 className="chat-history"
                 marginBottom="1px"
-                marginTop="5px"
+                marginTop="7px"
                 // maxHeight="200px"
                 // overflowY="auto"
             >
@@ -129,7 +129,7 @@ const ChatTab = () => {
                             fontSize='14px'
                             lineHeight='24px'
                             backgroundColor={
-                                chat.type === "user" ? "blue.100" : "rgba(245, 245, 245, 1)"
+                                chat.type === "user" ? "rgba(245, 245, 245, 1)" : ""
                             }
                             color={chat.type === "user" ? "rgba(51, 51, 51, 1)" : "rgba(51, 51, 51, 1)"}
                             maxWidth="80%"
@@ -170,6 +170,9 @@ const ChatTab = () => {
                 <Textarea resize="none" placeholder="Type a message"
                 className='Chat-textField'
                 borderRadius='30px'
+                // _placeholder={{
+                    padding= "20px"
+                //   }}
                 height='100px'
                     value={chatText}
                     onChange={(e) => setChatText(e.target.value)}
