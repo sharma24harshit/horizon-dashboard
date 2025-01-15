@@ -5,14 +5,13 @@
 .tabs-Header {
     /* border: 1px solid red; */
     border-bottom: 1px solid rgba(225, 225, 225, 1);
-    height: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .tab_icon{
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
     margin-right: 7px;
 }
@@ -21,7 +20,7 @@
     width: 50%;
     height: 100%;
     font-family: 'DM Sans';
-    font-size: calc(20px * (100vw / 1610));
+    font-size: 20px;
     font-weight: 600;
     line-height: 24px;
     display: flex;
@@ -170,13 +169,11 @@ border-radius:40px;
     width: 100%;
     overflow-y: scroll;
     padding: 2.5%;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 }
 .insight-tab-container>div{
-    /* width: inherit;
-    box-sizing: border-box; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -184,21 +181,15 @@ border-radius:40px;
     gap:10px;
 }
 .insight-text {
-    /* border: 1px solid red; */
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    flex-direction: row;
+    align-items: center;
     font-size: 14px;
     gap: 4px;
-    /* height:80px; */
-    padding: 1.5%;
+    padding: 2%;
     background-color: rgba(245, 245, 245, 1);
 }
 .insight-text>img{
-    /* border: 1px solid red; */
     width: 35px;
-    /* height: 60%; */
     aspect-ratio: 1;
-    /* width: 60%; */
 }
-

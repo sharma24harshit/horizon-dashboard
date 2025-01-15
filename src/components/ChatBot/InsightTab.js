@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Box, Button, Checkbox, Image, Spinner, Text, Textarea } from '@chakra-ui/react';
+import { Box, Checkbox, Image, Text } from '@chakra-ui/react';
 import {InsightMockData} from "./data";
 
 
@@ -39,6 +39,7 @@ const handleCheckboxChange = (id) => {
             <Checkbox 
             isChecked={item?.checked}
             onChange={() => handleCheckboxChange(item?.id)}
+            marginLeft='auto'
             />
           </Text>
         ))}
