@@ -17,9 +17,11 @@ const ChatTab = () => {
 
     // Scroll to bottom when chat history updates
   useEffect(() => {
-    if (chatContainerRef.current) {
-        //console.log(chatContainerRef.current.scrollHeight)
-      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    if(chatHistory.length > 0){
+        if (chatContainerRef.current) {
+            //console.log(chatContainerRef.current.scrollHeight)
+          chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+        }
     }
   }, [chatHistory]);
 
@@ -74,7 +76,6 @@ const ChatTab = () => {
             className={chatHistory.length ? 
                 'chat-tab-container':
             'chat-tab-container-with-flex'}
-            ref={chatContainerRef} // Reference to scroll container
         >
             {/* Suggested Questions */}
             <Box 
@@ -87,6 +88,7 @@ const ChatTab = () => {
             }
             marginBottom={{ base: "10px", sm: "10px", md: "5px", lg: "0px" }}
             // border={'1px solid red'}
+            ref={chatContainerRef} // Reference to scroll container
             >
 
             <Box className='chatTab-top-container'>
